@@ -1,0 +1,97 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+    }
+}
+apply plugin: 'android'
+repositories {
+    google()
+    jcenter()
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.androidclcp"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1070299
+        versionName "CPCL V1.07.01"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = defaultConfig.versionName +".apk"
+        }
+    }
+
+//    buildToolsVersion "25.0.2"
+//    aaptOptions {
+//        cruncherEnabled = false
+//        useNewCruncher = false
+//    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+//        ndk{
+//            abiFilters "armeabi","armeabi-v7a","mips","x86"
+//        }
+        // Move the tests to tests/java, tests/res, etc...
+        androidTest .setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+//    dependencies {
+//        implementation fileTree(include: '*.jar', dir: 'libs')
+////        implementation 'com.android.support:support-v4:25.3.1'
+//        implementation 'com.android.support:appcompat-v7:28.0.0'
+//        implementation 'com.jakewharton:butterknife:8.5.1'
+//        annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+//        implementation files('libs\\CPCL_V1.04PRO.jar')
+//    }
+}
+
+dependencies {
+    implementation fileTree(include: '*.jar', dir: 'libs')
+//        implementation 'com.android.support:support-v4:25.3.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.yancy.imageselector:imageselector:1.3.3'
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.14'
+    implementation files('libs\\CPCL_V1.07.jar')
+}

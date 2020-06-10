@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android_CPCL.iml" filepath="$PROJECT_DIR$/Android_CPCL.iml" group="Android_CPCL" />
+      <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" group="Android_CPCL/mylibrary" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.yancy.imageselector:imageselector:1.3.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13fef8bd7e8aa5701c2ba40dd8db4ef1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13fef8bd7e8aa5701c2ba40dd8db4ef1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yancy.imageselector/imageselector/1.3.3/d54ead4bf159e2206c3a068084f21e515c0f0e6f/imageselector-1.3.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
